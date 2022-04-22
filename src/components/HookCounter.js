@@ -14,7 +14,7 @@ function HookCounter() {
 
   return (
     <div>
-      <button onClick={setCount(count + 1)}>count {count}</button>
+      <button onClick={() => setCount(count + 1)}>count {count}</button>
       {/* call setCount, passing in the new count value  */}
       {/* and since it becomes a function call, we convert it to an arrow function */}
     </div>
@@ -22,3 +22,10 @@ function HookCounter() {
 }
 
 export default HookCounter;
+
+// RULES OF HOOKS
+// 1. Only call Hooks at the top level
+// (Don't call hooks inside loops, conditions or nested functions)
+
+// 2. Only call Hooks from React functions
+// (Call them only from React functional components and not just any regular JavaScript function)
