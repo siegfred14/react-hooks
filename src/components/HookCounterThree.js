@@ -10,15 +10,21 @@ function HookCounterThree() {
         <input
           type="text"
           value={name.firstName}
-          onChange={(e) => setName({ firstName: e.target.value })}
+          onChange={(e) => setName({ ...name, firstName: e.target.value })}
+          // this means overwrite the name and the change only the firstName
         />
         <input
           type="text"
           value={name.lastName}
-          onChange={(e) => setName({ lastName: e.target.value })}
+          onChange={(e) => setName({ ...name, lastName: e.target.value })}
+          // this means overwrite the name and the change only the lastName
         />
         <h2>Your Firstname is - {name.firstName}</h2>
         <h2>Your Firstname is - {name.lastName}</h2>
+        {/* useState does not automatically merge and update the object, unlike setState in class components
+            hence the unused field update disappears when the opposite field is updated
+            setState will merge the state, useState will not merge the state, and must be effected manually.
+            to do this, we use the spread operator to handle the manual merge */}
       </form>
     </div>
   );
