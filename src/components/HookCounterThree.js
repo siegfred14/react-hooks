@@ -25,9 +25,14 @@ function HookCounterThree() {
             hence the unused field update disappears when the opposite field is updated
             setState will merge the state, useState will not merge the state, and must be effected manually.
             to do this, we use the spread operator to handle the manual merge */}
+
+        <h2>{JSON.stringify(name)}</h2>
       </form>
     </div>
   );
 }
 
 export default HookCounterThree;
+
+// The setter function provided by the useState hook does not automatically merge and update objects.
+// You have to manually merge it and the pass the value to the setter function
