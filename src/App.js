@@ -1,19 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
-import ClassCounter from "./components/ClassCounter";
-import HookCounter from "./components/HookCounter";
-import HookCounterTwo from "./components/HookCounterTwo";
-import HookCounterThree from "./components/HookCounterThree";
-import HookCounterFour from "./components/HookCounterFour";
-import { useState } from "react";
+import ClassCounterOne from "./components/ClassCounterOne";
 
 function App() {
   return (
     <div className="App">
-      {/* <ClassCounter /> */}
-      <HookCounterFour />
+      <ClassCounterOne />
     </div>
   );
 }
 
 export default App;
+// useEffect Hook
+// The Effect Hook lets you perform side effects in functional components
+// it's a close replacement for componentDidMount, componentDidupdate and componentWillUnmount.
