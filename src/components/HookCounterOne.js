@@ -16,3 +16,7 @@ function HookCounterOne() {
 }
 
 export default HookCounterOne;
+
+// useEffect Hook
+// The Effect Hook lets you perform side effects in functional components
+// it's a close replacement for componentDidMount, componentDidupdate and componentWillUnmount.
