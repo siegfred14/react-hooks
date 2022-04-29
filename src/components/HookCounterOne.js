@@ -3,13 +3,25 @@ import React, { useEffect, useState } from "react";
 
 function HookCounterOne() {
   const [count, setCount] = useState(0);
+  const [name, setName] = useState("");
+
+  //   for conditionally executing an useEffect, we add a second parameter
+  //   this parameter is an array and in it, we need to specify either props or state that we need to watch for
+  //   only is those props or state were to change would the effect be executed
+  //   in this case, we include count in the array.
 
   useEffect(() => {
+    console.log("useEffect - Updating document title");
     document.title = `You clicked ${count} times`;
-  });
+  }, [count]);
 
   return (
     <div>
+      <input
+        type="text"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
       <button onClick={() => setCount(count + 1)}>Click {count} times</button>
     </div>
   );
