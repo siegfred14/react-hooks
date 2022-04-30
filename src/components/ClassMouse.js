@@ -10,12 +10,17 @@ class ClassMouse extends Component {
     };
   }
 
-  logMousePosition = (e) => {
-    this.setState({ x: e.clientX, y: e.clientY });
-  };
+  //   logMousePosition = (e) => {
+  //     this.setState({ x: e.clientX, y: e.clientY });
+  //   };
 
   componentDidMount() {
-    window.addEventListener("mousemove", this.logMousePosition);
+    window.addEventListener(
+      "mousemove",
+      (this.logMousePosition = (e) => {
+        this.setState({ x: e.clientX, y: e.clientY });
+      })
+    );
   }
 
   render() {
