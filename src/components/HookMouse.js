@@ -10,10 +10,11 @@ function HookMouse() {
     setY(e.clientY);
   };
 
+  //   To ensure the effect is called once on initial render only, we add an empty array as a second parameter
   useEffect(() => {
     console.log("useEffect called");
     window.addEventListener("mousemove", logMousePosition);
-  });
+  }, []);
 
   return (
     <div>
