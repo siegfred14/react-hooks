@@ -21,7 +21,7 @@ class ClassMouse extends Component {
   render() {
     return (
       <div>
-        <h1>mouse</h1>
+        X - {this.state.x} Y - {this.state.y}
       </div>
     );
   }
