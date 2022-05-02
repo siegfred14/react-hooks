@@ -25,5 +25,4 @@ function HookMouse() {
 
 export default HookMouse;
 
-// Make notes from video
 // We can mimic componentDidMount with useEffect hook by simply passing in an empty array as the second parameter to useEffect
