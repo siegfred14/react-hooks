@@ -31,3 +31,6 @@ function HookMouse() {
 export default HookMouse;
 
 // We can mimic componentDidMount with useEffect hook by simply passing in an empty array as the second parameter to useEffect
+
+// when you want to execute some component clean-up code, you include it in a function and return that function from the function, passed to useEffect.
+// The cleanup code can be cancelling subscriptions, timers or even removing event handlers.
