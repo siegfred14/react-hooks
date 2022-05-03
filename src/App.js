@@ -11,8 +11,8 @@ import IntervalHookCounter from "./components/IntervalHookCounter";
 function App() {
   return (
     <div className="App">
-      <IntervalClassCounter />
-      <IntervalHookCounter />
+      {/* <IntervalClassCounter />
+      <IntervalHookCounter /> */}
     </div>
   );
 }
