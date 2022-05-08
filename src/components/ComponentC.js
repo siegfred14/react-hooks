@@ -4,14 +4,10 @@
 import React from "react";
 import ComponentE from "./ComponentE";
 
-const UserContext = React.createContext();
-
-export function ComponentC() {
+function ComponentC() {
   return (
     <div>
-      <UserContext.Provider value={"Siegfred"}>
-        <ComponentE />
-      </UserContext.Provider>
+      <ComponentE />
     </div>
   );
 }

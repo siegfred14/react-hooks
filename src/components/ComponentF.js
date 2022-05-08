@@ -1,9 +1,14 @@
 import React from "react";
+import { UserContext } from "../App";
 
 function ComponentF() {
   return (
     <div>
-      <h1>Component F</h1>
+      <UserContext.Consumer>
+        {(user) => {
+          return <h1>User Context value {user} F</h1>;
+        }}
+      </UserContext.Consumer>
     </div>
   );
 }

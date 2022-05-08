@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import React from "react";
 import "./App.css";
 import ClassCounterOne from "./components/ClassCounterOne";
 import HookCounterOne from "./components/HookCounterOne";
@@ -10,10 +10,14 @@ import IntervalHookCounter from "./components/IntervalHookCounter";
 import DataFetching from "./components/DataFetching";
 import ComponentC from "./components/ComponentC";
 
+export const UserContext = React.createContext();
+
 function App() {
   return (
     <div className="App">
-      <ComponentC />
+      <UserContext.Provider value={"Siegfred"}>
+        <ComponentC />
+      </UserContext.Provider>
     </div>
   );
 }
