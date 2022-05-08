@@ -24,3 +24,5 @@ function ComponentF() {
 }
 
 export default ComponentF;
+
+// The useContext hook makes the consumption of the context simpler, without nesting
