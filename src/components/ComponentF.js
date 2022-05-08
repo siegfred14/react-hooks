@@ -1,12 +1,22 @@
 import React from "react";
-import { UserContext } from "../App";
+import { UserContext, ChannelContext } from "../App";
 
 function ComponentF() {
   return (
     <div>
       <UserContext.Consumer>
         {(user) => {
-          return <h1>User Context value {user} F</h1>;
+          return (
+            <ChannelContext.Consumer>
+              {(channel) => {
+                return (
+                  <h1>
+                    User Context value {user}, channel context value {channel}
+                  </h1>
+                );
+              }}
+            </ChannelContext.Consumer>
+          );
         }}
       </UserContext.Consumer>
     </div>
