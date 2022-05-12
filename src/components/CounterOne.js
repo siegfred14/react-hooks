@@ -7,9 +7,16 @@
 // useReducer(reducer, initialState)
 // reducer(currentState, action)
 
-import React from "react";
+import React, { useReducer } from "react";
+
+const initialState = 0;
+const reducer = (state, action) => {
+  return newState;
+};
 
 function CounterOne() {
+  const [state, dispatch] = useReducer(reducer, initialState);
+
   return (
     <div>
       <button>Increment</button>
