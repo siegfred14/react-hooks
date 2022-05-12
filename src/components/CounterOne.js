@@ -25,13 +25,14 @@ const reducer = (state, action) => {
 // reducer function accepts the current state and returns a new state
 
 function CounterOne() {
-  const [state, dispatch] = useReducer(reducer, initialState);
+  const [count, dispatch] = useReducer(reducer, initialState);
 
   return (
     <div>
-      <button>Increment</button>
-      <button>Decrement</button>
-      <button>Reset</button>
+      <div>Count - {count} </div>
+      <button onClick={() => dispatch("increment")}>Increment</button>
+      <button onClick={() => dispatch("decrement")}>Decrement</button>
+      <button onClick={() => dispatch("reset")}>Reset</button>
     </div>
   );
 }
