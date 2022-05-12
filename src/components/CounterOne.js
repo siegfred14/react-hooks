@@ -13,6 +13,7 @@ const initialState = 0;
 const reducer = (state, action) => {
   return newState;
 };
+// reducer function accepts the current state and returns a new state
 
 function CounterOne() {
   const [state, dispatch] = useReducer(reducer, initialState);
