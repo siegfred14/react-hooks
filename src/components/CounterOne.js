@@ -11,7 +11,16 @@ import React, { useReducer } from "react";
 
 const initialState = 0;
 const reducer = (state, action) => {
-  return newState;
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    case "default":
+      return state;
+  }
 };
 // reducer function accepts the current state and returns a new state
 
