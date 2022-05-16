@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useReducer } from "react";
 import "./App.css";
 import ClassCounterOne from "./components/ClassCounterOne";
 import HookCounterOne from "./components/HookCounterOne";
@@ -10,6 +10,7 @@ import IntervalHookCounter from "./components/IntervalHookCounter";
 import DataFetching from "./components/DataFetching";
 import ComponentC from "./components/ComponentC";
 import ComponentE from "./components/ComponentE";
+import CounterOne from "./components/CounterOne";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -17,12 +18,7 @@ export const ChannelContext = React.createContext();
 function App() {
   return (
     <div className="App">
-      <UserContext.Provider value={"Siegfred"}>
-        <ChannelContext.Provider value={"Samson"}>
-          {/* <ComponentC /> */}
-          <ComponentE />
-        </ChannelContext.Provider>
-      </UserContext.Provider>
+      <CounterOne />
     </div>
   );
 }
