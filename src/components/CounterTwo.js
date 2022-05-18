@@ -9,16 +9,16 @@ const initialState = {
 const reducer = (state, action) => {
   switch (action.type) {
     case "increment":
-      return { firstCounter: state.firstCounter + action.value };
+      return { ...state, firstCounter: state.firstCounter + action.value };
     case "decrement":
-      return { firstCounter: state.firstCounter - action.value };
+      return { ...state, firstCounter: state.firstCounter - action.value };
 
     // to change the second counter value, we'll create 2 more cases
 
     case "increment2":
-      return { secondCounter: state.secondCounter + action.value };
+      return { ...state, secondCounter: state.secondCounter + action.value };
     case "decrement2":
-      return { secondCounter: state.secondCounter - action.value };
+      return { ...state, secondCounter: state.secondCounter - action.value };
 
     case "reset":
       return initialState;
