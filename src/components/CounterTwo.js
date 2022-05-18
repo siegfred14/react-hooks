@@ -4,6 +4,7 @@ import React, { useReducer } from "react";
 
 const initialState = {
   firstCounter: 0,
+  secondCounter: 10,
 };
 const reducer = (state, action) => {
   switch (action.type) {
@@ -11,6 +12,14 @@ const reducer = (state, action) => {
       return { firstCounter: state.firstCounter + action.value };
     case "decrement":
       return { firstCounter: state.firstCounter - action.value };
+
+    // to change the second counter value, we'll create 2 more cases
+
+    case "increment2":
+      return { secondCounter: state.secondCounter + action.value };
+    case "decrement2":
+      return { secondCounter: state.secondCounter - action.value };
+
     case "reset":
       return initialState;
     case "default":
@@ -49,3 +58,6 @@ export default CounterTwo;
 // Advantages of using this method
 // First scenario is concerning the value to which we have to increment or decrement the counter
 // Eg if we want to increment and decrement by 5
+
+// With second scenario, we'll talk about state as an object
+// suppose we want to add another state property, this is easy when our state is an object.
