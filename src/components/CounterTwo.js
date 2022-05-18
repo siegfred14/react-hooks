@@ -26,6 +26,10 @@ const reducer = (state, action) => {
       return state;
   }
 };
+// Because we have two properties in the state object but changing 1 at a time,
+// we have to modify the return statements to merge the state properties in order to get the expected outcome
+// within the return statement, we spread the state properties
+
 // reducer function accepts the current state and returns a new state
 
 function CounterTwo() {
