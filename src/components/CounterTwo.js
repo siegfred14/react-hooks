@@ -37,7 +37,10 @@ function CounterTwo() {
 
   return (
     <div>
-      <div>Count - {count.firstCounter} </div>
+      <div>First Counter - {count.firstCounter}</div>
+      <div>Second Counter - {count.secondCounter}</div>
+
+      {/* <div>Count - {count.firstCounter} </div> */}
       <button onClick={() => dispatch({ type: "increment", value: 1 })}>
         Increment
       </button>
@@ -51,6 +54,15 @@ function CounterTwo() {
       <button onClick={() => dispatch({ type: "decrement", value: 5 })}>
         Decrement 5
       </button>
+
+      <div>
+        <button onClick={() => dispatch({ type: "increment2", value: 1 })}>
+          Increment Counter 2
+        </button>
+        <button onClick={() => dispatch({ type: "decrement2", value: 1 })}>
+          Decrement Counter 2
+        </button>
+      </div>
 
       <button onClick={() => dispatch({ type: "reset" })}>Reset</button>
     </div>
