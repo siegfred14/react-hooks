@@ -43,3 +43,9 @@ function CounterThree() {
 }
 
 export default CounterThree;
+
+// NB
+// When dealing with multiple state variables that have the same state transition,
+// it is a good idea to have multiple useReducer, making use of the same reducer function.
+// This would avoid the complexity of merging the state, if it were to be an object,
+// and also prevents us from duplicating code in the reducer function
