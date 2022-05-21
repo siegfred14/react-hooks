@@ -20,6 +20,9 @@ const reducer = (state, action) => {
 
 function CounterThree() {
   const [count, dispatch] = useReducer(reducer, initialState);
+  //   we will add another counter which would also have the same state transition
+  // we would create additional counters by specifying multiple useReducers
+  const [countTwo, dispatchTwo] = useReducer(reducer, initialState);
 
   return (
     <div>
@@ -27,6 +30,14 @@ function CounterThree() {
       <button onClick={() => dispatch("increment")}>Increment</button>
       <button onClick={() => dispatch("decrement")}>Decrement</button>
       <button onClick={() => dispatch("reset")}>Reset</button>
+
+      {/* CountTwo jsx */}
+      <div>
+        <div>Count - {countTwo} </div>
+        <button onClick={() => dispatchTwo("increment")}>Increment</button>
+        <button onClick={() => dispatchTwo("decrement")}>Decrement</button>
+        <button onClick={() => dispatchTwo("reset")}>Reset</button>
+      </div>
     </div>
   );
 }
