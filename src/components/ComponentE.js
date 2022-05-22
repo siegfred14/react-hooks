@@ -10,7 +10,8 @@ function ComponentE() {
   return (
     <div>
       <h1>
-        {user} - {channel}
+        {/* {user} - {channel} */}
+        <ComponentF />
       </h1>
     </div>
   );
