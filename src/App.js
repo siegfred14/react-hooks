@@ -19,6 +19,8 @@ import ComponentB from "./components/ComponentB";
 // export const UserContext = React.createContext();
 // export const ChannelContext = React.createContext();
 
+export const CountContext = React.createContext();
+
 const initialState = 0;
 const reducer = (state, action) => {
   switch (action) {
@@ -37,12 +39,14 @@ function App() {
   const [count, dispatch] = useReducer(reducer, initialState);
 
   return (
-    <div className="App">
-      <h1>Count - {count}</h1>
-      <ComponentA />
-      <ComponentB />
-      <ComponentC />
-    </div>
+    <CountContext.Provider>
+      <div className="App">
+        <h1>Count - {count}</h1>
+        <ComponentA />
+        <ComponentB />
+        <ComponentC />
+      </div>
+    </CountContext.Provider>
   );
 }
 
