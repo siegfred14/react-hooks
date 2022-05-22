@@ -13,6 +13,8 @@ import ComponentE from "./components/ComponentE";
 import CounterOne from "./components/CounterOne";
 import CounterTwo from "./components/CounterTwo";
 import CounterThree from "./components/CounterThree";
+import ComponentA from "./components/ComponentA";
+import ComponentB from "./components/ComponentB";
 
 export const UserContext = React.createContext();
 export const ChannelContext = React.createContext();
@@ -20,7 +22,9 @@ export const ChannelContext = React.createContext();
 function App() {
   return (
     <div className="App">
-      <CounterThree />
+      <ComponentA />
+      <ComponentB />
+      <ComponentC />
     </div>
   );
 }
