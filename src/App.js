@@ -16,12 +16,29 @@ import CounterThree from "./components/CounterThree";
 import ComponentA from "./components/ComponentA";
 import ComponentB from "./components/ComponentB";
 
-export const UserContext = React.createContext();
-export const ChannelContext = React.createContext();
+// export const UserContext = React.createContext();
+// export const ChannelContext = React.createContext();
+
+const initialState = 0;
+const reducer = (state, action) => {
+  switch (action) {
+    case "increment":
+      return state + 1;
+    case "decrement":
+      return state - 1;
+    case "reset":
+      return initialState;
+    case "default":
+      return state;
+  }
+};
 
 function App() {
+  const [count, dispatch] = useReducer(reducer, initialState);
+
   return (
     <div className="App">
+      <h1>Count - {count}</h1>
       <ComponentA />
       <ComponentB />
       <ComponentC />
