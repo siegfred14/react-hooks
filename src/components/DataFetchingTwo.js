@@ -31,7 +31,25 @@ const reducer = () => {
 function DataFetchingTwo() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  return <div>DataFetchingTwo</div>;
+  useEffect(() => {
+    axios
+      .get("https://jsonplaceholder.typicode.com/posts/1")
+      .then((response) => {
+        dispatch({ type: "FETCH_SUCCESS", payload: response.data });
+      })
+      .catch((error) => {
+        dispatch({ type: "FETCH_ERROR" });
+      });
+  }, []);
+
+  return (
+    <div>
+      <h1>
+        {state.loading ? "loading" : state.post.title}
+        {state.error ? error : null}
+      </h1>
+    </div>
+  );
 }
 
 export default DataFetchingTwo;
