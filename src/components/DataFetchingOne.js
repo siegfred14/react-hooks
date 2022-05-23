@@ -23,7 +23,10 @@ function DataFetchingOne() {
 
   return (
     <div>
-      <h1>Data Fetching</h1>
+      <h1>
+        {loading ? "loading" : post.title}
+        {error ? error : null}
+      </h1>
     </div>
   );
 }
