@@ -1,4 +1,4 @@
-import React, { useReducer } from "react";
+import React, { useReducer, useState } from "react";
 import "./App.css";
 import ClassCounterOne from "./components/ClassCounterOne";
 import HookCounterOne from "./components/HookCounterOne";
@@ -16,6 +16,7 @@ import CounterThree from "./components/CounterThree";
 import ComponentA from "./components/ComponentA";
 import ComponentB from "./components/ComponentB";
 import DataFetchingOne from "./components/DataFetchingOne";
+import DataFetchingTwo from "./components/DataFetchingTwo";
 
 // export const UserContext = React.createContext();
 // export const ChannelContext = React.createContext();
@@ -51,9 +52,17 @@ function App() {
     //   </div>
     // </CountContext.Provider>
     <div>
-      <DataFetchingOne />
+      <DataFetchingTwo />
     </div>
   );
 }
 
 export default App;
+
+// useState v useReducer
+// Scenario            -          useState            -        useReducer
+// Type of State           Number, String, Boolean         Object or Array
+// No of state transitions        one or two                    too many
+// Related state transitions        No                            Yes
+// Business Logic             No business logic           Complex Business Logic
+// Local v Global state           local                           global
